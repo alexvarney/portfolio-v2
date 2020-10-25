@@ -28,8 +28,14 @@ const CardChildren = styled.div`
 const OverlayCard = ({ children, className, depth = 1, overlayStyle }) => {
   return (
     <Card className={className}>
-      <CardChildren depth={depth}>{children}</CardChildren>
-      <CardOverlay depth={depth} overlayStyle={overlayStyle} />
+      <CardChildren className="content" depth={depth}>
+        {children}
+      </CardChildren>
+      <CardOverlay
+        className="overlay"
+        depth={depth}
+        overlayStyle={overlayStyle}
+      />
     </Card>
   )
 }

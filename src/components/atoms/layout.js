@@ -19,6 +19,9 @@ export default function Layout({ children }) {
             background-color: #fff;
           }
           @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans:wght@600;700&display=swap");
+          * {
+            box-sizing: border-box;
+          }
         `}
       />
       {children}

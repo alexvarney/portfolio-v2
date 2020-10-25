@@ -62,7 +62,7 @@ const LinkContainer = styled.div`
 `
 
 const Description = styled.p`
-  ${TextStyles.sm.body}
+  ${TextStyles.body}
   margin-top: 24px;
 `
 
@@ -82,7 +82,7 @@ export default function ProjectCard({ className }) {
   console.log(image)
 
   return (
-    <CardContainer>
+    <CardContainer className={className}>
       <Title>ElectionsMaster</Title>
       <ImageContainer>
         <OverlayCard overlayStyle={OverlayStyle}>
