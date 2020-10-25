@@ -8,7 +8,7 @@ const HeroContainer = styled.div`
   min-height: 700px;
   position: relative;
   background: linear-gradient(196.33deg, #3f1f58 0%, #a158db 103.78%);
-
+  z-index: 0;
   ::after {
     z-index: 1;
     position: absolute;
@@ -62,7 +62,7 @@ const Title = styled.h1`
   font-size: clamp(3rem, calc(0.5rem + 4vw), 4rem);
   line-height: 100%;
   margin: 0;
-  z-index: 10;
+
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.125);
 `
 

@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 
 const Card = styled.div`
   position: relative;
+  mix-blend-mode: normal;
 `
 
 const CardOverlay = styled.div`
@@ -14,20 +15,21 @@ const CardOverlay = styled.div`
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: ${props => props.depth * 2};
   ${props => props.overlayStyle};
 `
 
 const CardChildren = styled.div`
   position: relative;
-  z-index: 30;
+  mix-blend-mode: normal;
+  z-index: ${props => props.depth * 2 + 1};
 `
 
-const OverlayCard = ({ children, className, overlayStyle }) => {
+const OverlayCard = ({ children, className, depth = 1, overlayStyle }) => {
   return (
     <Card className={className}>
-      <CardChildren>{children}</CardChildren>
-      <CardOverlay overlayStyle={overlayStyle} />
+      <CardChildren depth={depth}>{children}</CardChildren>
+      <CardOverlay depth={depth} overlayStyle={overlayStyle} />
     </Card>
   )
 }

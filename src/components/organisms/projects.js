@@ -8,6 +8,19 @@ const SliderContainer = styled.div`
   & .slick-active button::before {
     color: #fff !important;
   }
+
+  & .slick-prev,
+  & .slick-next {
+    top: unset;
+    bottom: calc(-32px);
+  }
+
+  & .slick-next {
+    right: -12px;
+  }
+  & .slick-prev {
+    left: -12px;
+  }
 `
 
 export default function ProjectCardLayout() {

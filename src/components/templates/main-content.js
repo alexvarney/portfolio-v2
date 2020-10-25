@@ -7,6 +7,8 @@ import {
   SectionCard,
 } from "./main-content.style"
 import Projects from "../organisms/projects"
+import ToolIcons from "../molecules/tool-icon"
+import OverlayCard from "../atoms/overlay-card"
 
 export default function MainContent() {
   return (
@@ -28,6 +30,10 @@ export default function MainContent() {
         <SectionCard>
           <Title>My Projects</Title>
           <Projects />
+        </SectionCard>
+        <SectionCard>
+          <Title>Tools I Use</Title>
+          <ToolIcons />
         </SectionCard>
       </GridContainer>
     </Container>
