@@ -57,8 +57,6 @@ const ToolIconLayout = () => {
     }
   `).allFile.nodes
 
-  console.log(icons)
-
   return (
     <LayoutContainer>
       {icons.map(data => (

@@ -79,8 +79,6 @@ export default function ProjectCard({ className }) {
     }
   `).file.childImageSharp.fluid
 
-  console.log(image)
-
   return (
     <CardContainer className={className}>
       <Title>ElectionsMaster</Title>

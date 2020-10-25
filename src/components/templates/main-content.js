@@ -1,15 +1,7 @@
 import React from "react"
-import {
-  Container,
-  GridContainer,
-  Title,
-  TextContent,
-  SectionCard,
-  LayoutBlock,
-} from "./main-content.style"
+import { Title, TextContent, SectionCard } from "./main-content.style"
 import Projects from "../organisms/projects"
 import ToolIcons from "../molecules/tool-icon"
-import OverlayCard from "../atoms/overlay-card"
 import { Grid } from "../atoms/grid"
 import GradientSection from "../atoms/gradient-section"
 import { css } from "@emotion/core"
