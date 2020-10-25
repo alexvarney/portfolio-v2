@@ -1,10 +1,12 @@
 import React from "react"
-import { Title, TextContent, SectionCard } from "./main-content.style"
+import { Title, TextContent } from "./main-content.style"
 import Projects from "../organisms/projects"
 import ToolIcons from "../molecules/tool-icon"
 import { Grid } from "../atoms/grid"
 import GradientSection from "../atoms/gradient-section"
 import { css } from "@emotion/core"
+import Text from "../atoms/text"
+import SectionCard from "../molecules/section-card"
 
 const LowerOverlayStyle = css`
   background: linear-gradient(196.33deg, #581f4f 0%, #db586f 103.78%);
@@ -14,6 +16,16 @@ const UpperOverlayStyle = css`
   mix-blend-mode: darken;
 `
 
+const CardTitle = ({ children }) => (
+  <Text.Title
+    sm={css`
+      margin: 0 0 32px 0;
+    `}
+  >
+    {children}
+  </Text.Title>
+)
+
 export default function MainContent() {
   return (
     <GradientSection
@@ -21,25 +33,22 @@ export default function MainContent() {
       lowerStyle={LowerOverlayStyle}
     >
       <Grid>
-        <SectionCard col="1 / 5">
-          <Title>About Me</Title>
-          <TextContent>
+        <SectionCard title="About Me" col="1 / 5">
+          <Text.Body>
             I’m Alex, a web developer from Waterloo, Ontario, 🇨🇦. I build
             full-stack apps and beautiful, responsive websites using React and
             Node.js.
-          </TextContent>
-          <TextContent>
+          </Text.Body>
+          <Text.Body>
             I’ve been writing code for almost 10 years and have been building
             websites for nearly 5. When I’m not working I like to play games,
             take photos and attend indie-rock shows.
-          </TextContent>
+          </Text.Body>
         </SectionCard>
-        <SectionCard col="5 / -1" row="span 3">
-          <Title>My Projects</Title>
+        <SectionCard title="My Projects" col="5 / -1" row="span 3">
           <Projects />
         </SectionCard>
-        <SectionCard col="1 / 5" row="2">
-          <Title>Tools I Use</Title>
+        <SectionCard title="Tools I Use" col="1 / 5" row="2">
           <ToolIcons />
         </SectionCard>
       </Grid>

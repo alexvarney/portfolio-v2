@@ -5,7 +5,7 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import OverlayCard from "../atoms/overlay-card"
 import Snippets from "../util/snippets"
-import TextStyles from "../util/text-styles"
+import Text from "../atoms/text"
 
 const CardContainer = styled.div`
   max-width: 100%;
@@ -61,11 +61,6 @@ const LinkContainer = styled.div`
   }
 `
 
-const Description = styled.p`
-  ${TextStyles.body}
-  margin-top: 24px;
-`
-
 export default function ProjectCard({ className }) {
   const image = useStaticQuery(graphql`
     query {
@@ -91,11 +86,15 @@ export default function ProjectCard({ className }) {
         </OverlayCard>
         <Image imgStyle={{ objectFit: "cover" }} fluid={image} />
       </ImageContainer>
-      <Description>
+      <Text.Body
+        sm={css`
+          margin: 24px 0;
+        `}
+      >
         A project to track the policy positions and polling data for candidates
         in upcoming elections. Built using React with a REST API powered by
         Node, Express and MongoDB/Mongoose.
-      </Description>
+      </Text.Body>
     </CardContainer>
   )
 }

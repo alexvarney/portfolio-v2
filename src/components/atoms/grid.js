@@ -8,7 +8,8 @@ export const Grid = styled.div`
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
   max-width: 1440px;
-  grid-gap: 32px;
+  grid-column-gap: 0px;
+  grid-row-gap: 32px;
 
   @media (min-width: ${Breakpoints.lg}) {
     padding: 48px;
