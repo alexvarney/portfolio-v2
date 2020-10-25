@@ -11,7 +11,7 @@ export const Grid = styled.div`
   grid-gap: 32px;
 
   @media (min-width: ${Breakpoints.lg}) {
-    padding: 64px;
+    padding: 48px;
     margin: 0 auto;
     grid-gap: 48px;
   }

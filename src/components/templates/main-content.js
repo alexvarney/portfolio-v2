@@ -42,7 +42,7 @@ export default function MainContent() {
             take photos and attend indie-rock shows.
           </TextContent>
         </SectionCard>
-        <SectionCard col="5 / -1" row="span 2">
+        <SectionCard col="5 / -1" row="span 3">
           <Title>My Projects</Title>
           <Projects />
         </SectionCard>

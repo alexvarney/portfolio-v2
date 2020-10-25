@@ -21,9 +21,8 @@ export const SectionCard = styled(OverlayCard)`
   grid-column: 1 / -1;
   max-width: 100%;
   overflow: hidden;
-  & + & {
-    margin-top: 32px;
-  }
+
+  align-self: start;
 
   @media (min-width: ${Breakpoints.lg}) {
     & > .overlay {

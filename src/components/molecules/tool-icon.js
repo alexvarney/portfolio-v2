@@ -39,6 +39,10 @@ const LayoutContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   grid-gap: 32px;
+
+  @media (min-width: ${Breakpoints.lg}) {
+    grid-gap: 24px;
+  }
 `
 
 const ToolIconLayout = () => {
