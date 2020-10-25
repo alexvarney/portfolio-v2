@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-import OverlayCard from "./overlay-card"
+import OverlayCard from "../atoms/overlay-card"
 
 const HeroContainer = styled.div`
   width: 100%;
