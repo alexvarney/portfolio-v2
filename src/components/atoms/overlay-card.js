@@ -23,7 +23,7 @@ const CardChildren = styled.div`
   z-index: 30;
 `
 
-const OverlayCard = ({ children, className, shadow = true, overlayStyle }) => {
+const OverlayCard = ({ children, className, overlayStyle }) => {
   return (
     <Card className={className}>
       <CardChildren>{children}</CardChildren>
