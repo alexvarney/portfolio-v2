@@ -65,9 +65,9 @@ export default function Link({
 
   return (
     <LinkContainer href={href} {...rest}>
-      {icon && <Logo src={icon} />}
+      {icon && <Logo src={icon} alt="" />}
       <span>{children}</span>
-      {chevron && <Chevron src={chevronSvg} />}
+      {chevron && <Chevron src={chevronSvg} alt="" />}
     </LinkContainer>
   )
 }

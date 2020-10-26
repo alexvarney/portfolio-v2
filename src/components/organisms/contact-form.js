@@ -32,7 +32,7 @@ export default function ContactForm(props) {
         type="text"
         as="textarea"
         label="message"
-        formId="form-message"
+        inputId="form-message"
         name="message"
         placeholder="Your message here..."
       />

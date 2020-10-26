@@ -90,7 +90,11 @@ export default function ProjectCard({
             </a>
           </LinkContainer>
         </OverlayCard>
-        <Image imgStyle={{ objectFit: "cover" }} fluid={image} />
+        <Image
+          imgStyle={{ objectFit: "cover" }}
+          fluid={image}
+          alt={`Screenshot of ${title}`}
+        />
       </ImageContainer>
       <Text.Body
         sm={css`
