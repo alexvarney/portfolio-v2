@@ -21,7 +21,8 @@ RUN apk --no-cache add shadow \
 WORKDIR /usr/src/app
 
 #Bundle app source
-RUN git clone https://github.com/alexvarney/portfolio-v2.git .
+ADD https://api.github.com/repos/alexvarney/portfolio-v2/git/refs/heads/main version.json
+RUN git clone -b $BRANCH https://github.com/alexvarney/portfolio-v2.git ./
 
 #Build the client app
 RUN yarn && yarn build
