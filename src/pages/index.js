@@ -5,6 +5,7 @@ import Layout from "../components/atoms/layout"
 import Hero from "../components/templates/hero"
 import MainContent from "../components/templates/main-content"
 import Footer from "../components/templates/footer"
+import Text from "../components/atoms/text"
 
 const IndexPage = () => {
   const projectsQuery = useStaticQuery(graphql`
@@ -75,7 +76,23 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Hero />
-      <MainContent projects={projects} />
+      <MainContent
+        projects={projects}
+        about={
+          <>
+            <Text.Body>
+              I’m Alex, a web developer from Waterloo, Ontario, 🇨🇦. I build
+              full-stack apps and beautiful, responsive websites using React and
+              Node.js.
+            </Text.Body>
+            <Text.Body>
+              I’ve been writing code for almost 10 years and have been building
+              websites for nearly 5. When I’m not working I like to play games,
+              take photos and attend concerts shows.
+            </Text.Body>
+          </>
+        }
+      />
       <Footer />
     </Layout>
   )

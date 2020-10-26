@@ -24,7 +24,7 @@ const FormInput = React.forwardRef(
             margin: 0 0 8px 0;
           `}
           as="label"
-          for={inputId}
+          htmlFor={inputId}
         >
           {label}
         </Text.FooterHeading>

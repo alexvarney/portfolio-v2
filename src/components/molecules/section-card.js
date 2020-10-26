@@ -15,6 +15,10 @@ const SectionCardWrapper = styled(OverlayCard)`
 
   box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.25);
 
+  p + p {
+    margin-top: 24px;
+  }
+
   @media (min-width: ${Breakpoints.lg}) {
     & > .overlay {
       display: none;

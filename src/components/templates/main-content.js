@@ -16,17 +16,7 @@ const UpperOverlayStyle = css`
   mix-blend-mode: darken;
 `
 
-const CardTitle = ({ children }) => (
-  <Text.Title
-    sm={css`
-      margin: 0 0 32px 0;
-    `}
-  >
-    {children}
-  </Text.Title>
-)
-
-export default function MainContent({ projects }) {
+export default function MainContent({ projects, about }) {
   return (
     <GradientSection
       upperStyle={UpperOverlayStyle}
@@ -34,16 +24,7 @@ export default function MainContent({ projects }) {
     >
       <Grid>
         <SectionCard title="About Me" col="1 / 5">
-          <Text.Body>
-            I’m Alex, a web developer from Waterloo, Ontario, 🇨🇦. I build
-            full-stack apps and beautiful, responsive websites using React and
-            Node.js.
-          </Text.Body>
-          <Text.Body>
-            I’ve been writing code for almost 10 years and have been building
-            websites for nearly 5. When I’m not working I like to play games,
-            take photos and attend indie-rock shows.
-          </Text.Body>
+          {about}
         </SectionCard>
         <SectionCard title="Featured Projects" col="5 / -1" row="span 3">
           <Projects content={projects} />
