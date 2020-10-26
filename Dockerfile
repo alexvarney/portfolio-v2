@@ -27,4 +27,4 @@ RUN git clone https://github.com/alexvarney/portfolio-v2.git .
 RUN yarn && yarn build
 
 #Run the app
-CMD ["serve", "-s", "public"]
+CMD ["serve", "-s", "./public"]
