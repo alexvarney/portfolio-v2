@@ -26,7 +26,7 @@ const CardTitle = ({ children }) => (
   </Text.Title>
 )
 
-export default function MainContent() {
+export default function MainContent({ projects }) {
   return (
     <GradientSection
       upperStyle={UpperOverlayStyle}
@@ -45,8 +45,8 @@ export default function MainContent() {
             take photos and attend indie-rock shows.
           </Text.Body>
         </SectionCard>
-        <SectionCard title="My Projects" col="5 / -1" row="span 3">
-          <Projects />
+        <SectionCard title="Featured Projects" col="5 / -1" row="span 3">
+          <Projects content={projects} />
         </SectionCard>
         <SectionCard title="Tools I Use" col="1 / 5" row="2">
           <ToolIcons />

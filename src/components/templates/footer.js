@@ -1,9 +1,11 @@
 import React from "react"
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 import { Grid } from "../atoms/grid"
 import GradientSection from "../atoms/gradient-section"
-import { css } from "@emotion/core"
 import SectionCard from "../molecules/section-card"
-import Text from "../atoms/text"
+import SocialLinks from "../organisms/social-links"
+import _ContactForm from "../organisms/contact-form"
 
 const LowerOverlayStyle = css`
   background: linear-gradient(203.17deg, #231d29 0%, #000000 75.03%);
@@ -15,6 +17,10 @@ const UpperOverlayStyle = css`
     #000000 100%
   );
   mix-blend-mode: lighten;
+`
+
+const ContactForm = styled(_ContactForm)`
+  margin-top: 96px;
 `
 
 export default function Footer() {
@@ -37,25 +43,8 @@ export default function Footer() {
           }}
           col="4 / -4"
         >
-          <Text.Body
-            sm={css`
-              margin: 0 0 32px 0;
-            `}
-            lg={css`
-              text-align: center;
-            `}
-          >
-            I need to put a form here
-          </Text.Body>
-          <Text.Body
-            lg={css`
-              text-align: center;
-            `}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim
-            maiores facilis dolor totam quam natus vero, animi libero laudantium
-            adipisci, sunt velit fuga voluptatum quo id odio at corrupti?
-          </Text.Body>
+          <SocialLinks />
+          <ContactForm />
         </SectionCard>
       </Grid>
     </GradientSection>

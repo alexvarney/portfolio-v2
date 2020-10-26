@@ -31,7 +31,19 @@ const Heading2 = css`
   }
 `
 
+const FooterHeading = css`
+  font-family: ${Typefaces.josefinSans};
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 11px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 1.5px 1.5px 0px rgba(0, 0, 0, 0.125);
+`
+
 export default {
   body: MobileBodyText,
   h2: Heading2,
+  footerHeading: FooterHeading,
 }

@@ -13,13 +13,16 @@ const TextElement = styled.p`
     ${props => props.styleLg}
   }
 `
-/**
- *
- * @param {*} param0
- */
-const Text = ({ as = "p", className, children, sm, lg }) => {
+
+const Text = ({ as = "p", className, children, sm, lg, ...rest }) => {
   return (
-    <TextElement as={as} className={className} styleSm={sm} styleLg={lg}>
+    <TextElement
+      as={as}
+      className={className}
+      styleSm={sm}
+      styleLg={lg}
+      {...rest}
+    >
       {children}
     </TextElement>
   )
@@ -30,6 +33,20 @@ Text.Body = ({ className, children, sm, ...rest }) => {
     <Text
       sm={css`
         ${TextStyles.body};
+        ${sm};
+      `}
+      {...rest}
+    >
+      {children}
+    </Text>
+  )
+}
+
+Text.FooterHeading = ({ className, children, sm, ...rest }) => {
+  return (
+    <Text
+      sm={css`
+        ${TextStyles.footerHeading};
         ${sm};
       `}
       {...rest}

@@ -44,17 +44,17 @@ const DesktopProjectCard = styled(ProjectCard)`
   }
 `
 
-export default function ProjectCardLayout() {
+export default function ProjectCardLayout({ content }) {
   return (
     <SectionContainer>
-      <DesktopProjectCard />
-      <DesktopProjectCard />
-      <DesktopProjectCard />
+      {content.map(cardProps => (
+        <DesktopProjectCard key={`pc-lg-${cardProps.title}`} {...cardProps} />
+      ))}
       <SliderContainer>
         <Slider arrows dots>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {content.map(cardProps => (
+            <ProjectCard key={`pc-sm-${cardProps.title}`} {...cardProps} />
+          ))}
         </Slider>
       </SliderContainer>
     </SectionContainer>

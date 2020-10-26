@@ -59,29 +59,35 @@ const LinkContainer = styled.div`
     opacity: 0.75;
     cursor: pointer;
   }
+
+  a,
+  a:link,
+  a:visited {
+    color: #fff;
+    text-decoration: none;
+  }
 `
 
-export default function ProjectCard({ className }) {
-  const image = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "electionsmaster-figma.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 900, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `).file.childImageSharp.fluid
-
+export default function ProjectCard({
+  className,
+  title,
+  description,
+  image,
+  sourceUrl,
+  demoUrl,
+}) {
   return (
     <CardContainer className={className}>
-      <Title>ElectionsMaster</Title>
+      <Title>{title}</Title>
       <ImageContainer>
         <OverlayCard overlayStyle={OverlayStyle}>
           <LinkContainer>
-            <a>Source</a>
-            <a>Demo</a>
+            <a href={sourceUrl} target="_blank" rel="noopener">
+              Source
+            </a>
+            <a href={demoUrl} target="_blank" rel="noopener">
+              Demo
+            </a>
           </LinkContainer>
         </OverlayCard>
         <Image imgStyle={{ objectFit: "cover" }} fluid={image} />
@@ -91,9 +97,7 @@ export default function ProjectCard({ className }) {
           margin: 24px 0;
         `}
       >
-        A project to track the policy positions and polling data for candidates
-        in upcoming elections. Built using React with a REST API powered by
-        Node, Express and MongoDB/Mongoose.
+        {description}
       </Text.Body>
     </CardContainer>
   )
