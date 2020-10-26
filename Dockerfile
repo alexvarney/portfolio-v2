@@ -1,4 +1,4 @@
-FROM node:10.15-alpine                                                                            
+FROM node:10-alpine3.10                                                         
                                                                                                   
 RUN apk --no-cache add shadow \                                                                   
     git \                                                                                         
