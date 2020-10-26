@@ -1,10 +1,24 @@
-FROM node:lts-alpine3.9
+FROM node:10.15-alpine                                                                            
+                                                                                                  
+RUN apk --no-cache add shadow \                                                                   
+    git \                                                                                         
+    gcc \                                                                                         
+    musl-dev \                                                                                    
+    autoconf \                                                                                    
+    automake \                                                                                    
+    make \                                                                                        
+    libtool \                                                                                     
+    nasm \                                                                                        
+    tiff \                                                                                        
+    jpeg \                                                                                        
+    zlib \                                                                                        
+    zlib-dev \                                                                                    
+    file \                                                                                        
+    pkgconf \                                                                                     
+    && yarn install
 
 #Create app directory
 WORKDIR /usr/src/app
-
-#Add git
-RUN apk add --no-cache git
 
 #Bundle app source
 RUN git clone https://github.com/alexvarney/portfolio-v2.git .
