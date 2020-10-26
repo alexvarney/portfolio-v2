@@ -74,7 +74,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO />
+      <SEO title="Alexander Varney" />
       <Hero />
       <MainContent
         projects={projects}

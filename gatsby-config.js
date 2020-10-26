@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Alexander Varney | varney.me`,
-    description: `Alexander Varney, Web Developer. Building beautiful, responsive websites.`,
+    title: `varney.me`,
+    description: `Alexander Varney - Web Developer. Building beautiful, responsive websites.`,
     author: `@alexvarney`,
   },
   plugins: [
@@ -29,7 +29,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Alexander Varney | varney.me`,
+        name: `varney.me`,
         short_name: `varney.me`,
         start_url: `/`,
         background_color: `#663399`,
