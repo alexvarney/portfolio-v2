@@ -18,11 +18,13 @@ RUN apk --no-cache add shadow \
     && yarn install
 
 #Create app directory
-WORKDIR /usr/src/app
+WORKDIR /usr/src/
 
 #Bundle app source
 ADD https://api.github.com/repos/alexvarney/portfolio-v2/git/refs/heads/main version.json
-RUN git clone -b main https://github.com/alexvarney/portfolio-v2.git ./
+RUN git clone -b main https://github.com/alexvarney/portfolio-v2.git ./app
+
+WORKDIR /usr/src/app
 
 #Build the client app
 RUN yarn && yarn build
