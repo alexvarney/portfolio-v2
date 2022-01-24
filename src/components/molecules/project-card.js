@@ -82,12 +82,16 @@ export default function ProjectCard({
       <ImageContainer>
         <OverlayCard overlayStyle={OverlayStyle}>
           <LinkContainer>
-            <a href={sourceUrl} target="_blank" rel="noopener">
-              Source
-            </a>
-            <a href={demoUrl} target="_blank" rel="noopener">
-              Demo
-            </a>
+            {sourceUrl && (
+              <a href={sourceUrl} target="_blank" rel="noopener">
+                Source
+              </a>
+            )}
+            {demoUrl && (
+              <a href={demoUrl} target="_blank" rel="noopener">
+                Demo
+              </a>
+            )}
           </LinkContainer>
         </OverlayCard>
         <Image

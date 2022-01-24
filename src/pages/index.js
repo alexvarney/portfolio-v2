@@ -59,16 +59,16 @@ const IndexPage = () => {
     {
       title: "ElectionsMaster",
       image: projectsQuery.elections.childImageSharp.fluid,
-      demoUrl: "https://electionsmaster.com",
+      demoUrl: "https://electionsmaster.varney.me",
       sourceUrl: "https://github.com/alexvarney/electionsmaster",
-      description: `A project to track the policy positions and polling data for candidates in upcoming elections. Built using React with a REST API powered by Node, Express and MongoDB/Mongoose.`,
+      description: `A project to track the policy positions and polling data for candidates in upcoming elections. Built using React with a REST API powered by Node, Express and MongoDB/Mongoose. (No longer updated)`,
     },
     {
       title: "Spotify Lyrics",
       image: projectsQuery.spotify.childImageSharp.fluid,
-      demoUrl: "https://spotify-lyrics.varney.me/",
+      //demoUrl: "https://spotify-lyrics.varney.me/",
       sourceUrl: "https://github.com/alexvarney/spotify-lyrics",
-      description: `View the Genius.com lyrics for your currently playing track on Spotify. Written in React/Node, this project implements Spotify and Genius API authentication.`,
+      description: `View the Genius.com lyrics for your currently playing track on Spotify. Written in React/Node, this project implements Spotify and Genius API authentication. (Broken due to restrictions in Genius API)`,
     },
   ]
 
